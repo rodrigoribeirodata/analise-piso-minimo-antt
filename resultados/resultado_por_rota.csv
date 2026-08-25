@@ -1,0 +1,11 @@
+cliente;rota;cargas;cargas_abaixo;pct_abaixo;exposicao
+Cliente A;SP x CE;62;26;41.9;70787.08
+Cliente A;PR x PE;58;19;32.8;52883.03
+Cliente A;MG x RS;58;22;37.9;39367.88
+Cliente A;GO x SP;63;34;54.0;38222.32
+Cliente A;SP x BA;51;22;43.1;37320.77
+Cliente A;SC x SP;60;37;61.7;33117.35
+Cliente A;MS x MG;52;31;59.6;32448.94
+Cliente A;RJ x MG;53;39;73.6;23820.94
+Cliente C;RJ x MG;18;16;88.9;3510.23
+Cliente B;RJ x MG;14;11;78.6;2679.44
