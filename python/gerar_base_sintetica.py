@@ -58,6 +58,25 @@ def gerar(n: int = 900, semente: int = SEMENTE) -> list[dict[str, object]]:
         eixos = rng.choice(EIXOS_POSSIVEIS)
         dt = data_aleatoria(rng)
 
+<<<<<<< HEAD
+        # Valores aproximados usados somente para gerar a base de demonstração.
+        # O Cliente A concentra a maior parte dos desvios (frequentes e mais
+        # profundos); os demais clientes têm desvios ocasionais e mais rasos.
+        # Isso produz uma concentração realista, em torno de 70% da exposição no
+        # Cliente A, sem torná-la binária. O cálculo oficial do piso é feito
+        # depois, com os coeficientes históricos reais.
+        coef_aprox = {5: 6.10, 6: 6.75, 7: 7.40, 9: 8.50}[eixos]
+        if cliente == "Cliente A":
+            if rng.random() < 0.42:
+                base_km = coef_aprox * rng.uniform(0.80, 0.95)   # abaixo, mais forte
+            else:
+                base_km = coef_aprox * rng.uniform(1.06, 1.30)
+        else:
+            if rng.random() < 0.08:
+                base_km = coef_aprox * rng.uniform(0.94, 0.99)   # abaixo, ocasional e raso
+            else:
+                base_km = coef_aprox * rng.uniform(1.07, 1.32)
+=======
         # Valores aproximados usados somente para gerar uma distribuição com
         # maioria de operações aderentes e concentração de desvios no Cliente A.
         # O cálculo oficial é feito depois, com os coeficientes históricos reais.
@@ -66,6 +85,7 @@ def gerar(n: int = 900, semente: int = SEMENTE) -> list[dict[str, object]]:
             base_km = coef_aprox * rng.uniform(0.82, 0.97)
         else:
             base_km = coef_aprox * rng.uniform(1.05, 1.30)
+>>>>>>> 3c4b397e17f169ae1dd6653b507f51c9ca6d1744
 
         frete_sem_icms = round(km * base_km, 2)
         tem_icms = rng.random() < 0.5
@@ -107,4 +127,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> 3c4b397e17f169ae1dd6653b507f51c9ca6d1744

@@ -219,6 +219,10 @@ def main() -> None:
             "amostra_fato_piso.csv": (
                 "SELECT * FROM fato_piso ORDER BY dt_saida, ID LIMIT 25"
             ),
+<<<<<<< HEAD
+            "fato_piso.csv": "SELECT * FROM fato_piso ORDER BY dt_saida, ID",
+=======
+>>>>>>> 3c4b397e17f169ae1dd6653b507f51c9ca6d1744
         }
 
         linhas_cliente: list[tuple] = []
@@ -240,4 +244,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> 3c4b397e17f169ae1dd6653b507f51c9ca6d1744
